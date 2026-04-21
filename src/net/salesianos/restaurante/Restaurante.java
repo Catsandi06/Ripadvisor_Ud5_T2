@@ -1,4 +1,4 @@
-package net.salesianos;
+package net.salesianos.restaurante;
 
 public class Restaurante {
     private String nombre;
@@ -60,7 +60,8 @@ public class Restaurante {
 
     @Override
     public String toString() {
-        return "Restaurante: " + nombre + "\n" + "Direccion: " + direccion + "\n" + "Tipo: " + tipoCocina + "\n" + "Puntuacion: " + puntuacion + "\n" + "Valoracion: " + valoracion;
+        return "Restaurante: " + nombre + "\n" + "Direccion: " + direccion + "\n" + "Tipo: " + tipoCocina + "\n"
+                + "Puntuacion: " + puntuacion + "\n" + "Valoracion: " + valoracion;
     }
 
     public boolean tienePuntuacionAlta() {

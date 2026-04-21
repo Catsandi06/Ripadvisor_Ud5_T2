@@ -1,4 +1,4 @@
-package net.salesianos;
+package net.salesianos.validaciones;
 
 import javax.swing.JOptionPane;
 

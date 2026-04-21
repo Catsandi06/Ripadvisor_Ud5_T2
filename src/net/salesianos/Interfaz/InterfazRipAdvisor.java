@@ -1,8 +1,10 @@
-package net.salesianos;
+package net.salesianos.interfaz;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import javax.swing.*;
+import net.salesianos.gestor.GestorRestaurantes;
+import net.salesianos.restaurante.Restaurante;
+import net.salesianos.validaciones.Validaciones;
 
 public class InterfazRipAdvisor extends JFrame {
     private GestorRestaurantes gestor;

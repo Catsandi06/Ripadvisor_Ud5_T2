@@ -1,7 +1,8 @@
-package net.salesianos;
+package net.salesianos.gestor;
 
 import java.util.ArrayList;
 import java.util.List;
+import net.salesianos.restaurante.Restaurante;
 
 public class GestorRestaurantes {
     private List<Restaurante> restaurantes;

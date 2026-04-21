@@ -1,4 +1,4 @@
-import net.salesianos.InterfazRipAdvisor;
+import net.salesianos.interfaz.InterfazRipAdvisor;
 
 public class App {
     public static void main(String[] args) {
