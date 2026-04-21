@@ -1,10 +1,5 @@
 package net.salesianos;
 
-/**
- * Clase que representa un restaurante en el sistema de ranking RipAdvisor.
- * Almacena la informacion de restaurantes incluyendo nombre, direccion,
- * tipo de cocina y puntuacion para el ranking.
- */
 public class Restaurante {
     private String nombre;
     private String direccion;

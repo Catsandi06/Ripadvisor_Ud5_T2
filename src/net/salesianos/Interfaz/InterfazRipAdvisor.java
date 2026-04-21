@@ -4,9 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * Interfaz grafica de la aplicacion RipAdvisor.
- */
 public class InterfazRipAdvisor extends JFrame {
     private GestorRestaurantes gestor;
     private JTextArea areaTexto;

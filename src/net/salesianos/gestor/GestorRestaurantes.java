@@ -3,9 +3,6 @@ package net.salesianos;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase que gestiona la lista de restaurantes.
- */
 public class GestorRestaurantes {
     private List<Restaurante> restaurantes;
 

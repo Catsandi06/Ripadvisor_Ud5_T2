@@ -2,9 +2,6 @@ package net.salesianos;
 
 import javax.swing.JOptionPane;
 
-/**
- * Clase con metodos estaticos para validar datos y mostrar dialogos.
- */
 public class Validaciones {
 
     public static boolean esCadenaVacia(String cadena) {
