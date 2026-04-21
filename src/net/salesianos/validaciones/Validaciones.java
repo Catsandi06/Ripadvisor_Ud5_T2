@@ -26,4 +26,12 @@ public class Validaciones {
     public static int mostrarConfirmacion(String mensaje, String titulo) {
         return JOptionPane.showConfirmDialog(null, mensaje, titulo, JOptionPane.YES_NO_OPTION);
     }
+
+    public static String solicitarCadena(String mensaje, String titulo) {
+        return JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE);
+    }
+
+    public static boolean esPuntuacionValida(int puntuacion) {
+        return puntuacion >= 1 && puntuacion <= 5;
+    }
 }
