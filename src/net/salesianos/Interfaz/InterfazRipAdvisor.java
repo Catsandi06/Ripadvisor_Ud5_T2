@@ -39,8 +39,20 @@ public class InterfazRipAdvisor extends JFrame {
         JMenuItem mostrar = new JMenuItem("Mostrar restaurantes");
         mostrar.addActionListener(e -> mostrarRestaurantes());
 
+        JMenuItem editar = new JMenuItem("Editar restaurante");
+        editar.addActionListener(e -> editarRestaurante());
+
+        JMenuItem eliminar = new JMenuItem("Eliminar restaurante");
+        eliminar.addActionListener(e -> eliminarRestaurante());
+
+        JMenuItem salir = new JMenuItem("Salir");
+        salir.addActionListener(e -> salir());
+
         menu.add(anadir);
         menu.add(mostrar);
+        menu.add(editar);
+        menu.add(eliminar);
+        menu.add(salir);
 
         menuBar.add(menu);
         setJMenuBar(menuBar);
@@ -79,5 +91,43 @@ public class InterfazRipAdvisor extends JFrame {
             sb.append(r.toString()).append("\n\n");
         }
         areaTexto.setText(sb.toString());
+    }
+
+    private void editarRestaurante() {
+        if (gestor.getCantidad() == 0) {
+            Validaciones.mostrarMensaje("No hay restaurantes", "Error");
+            return;
+        }
+        String nuevoNombre = Validaciones.solicitarCadena("Nuevo nombre:", "Editar");
+        if (!Validaciones.esCadenaVacia(nuevoNombre)) {
+            gestor.getRestaurantes().get(0).setNombre(nuevoNombre);
+            Validaciones.mostrarMensaje("Editado", "OK");
+        }
+    }
+
+    private void eliminarRestaurante() {
+        if (gestor.getCantidad() == 0) {
+            Validaciones.mostrarMensaje("No hay restaurantes", "Error");
+            return;
+        }
+        int opcion = Validaciones.mostrarConfirmacion("Eliminar?", "Eliminar");
+        if (opcion == JOptionPane.YES_OPTION) {
+            gestor.eliminarRestaurante(0);
+            Validaciones.mostrarMensaje("Eliminado", "OK");
+        }
+    }
+
+    private void salir() {
+        int opcion = Validaciones.mostrarConfirmacion("Salir?", "Salir");
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }
+
+    public void iniciar() {
+        SwingUtilities.invokeLater(() -> {
+            setVisible(true);
+            areaTexto.setText("Bienvenido a RipAdvisor\n");
+        });
     }
 }
