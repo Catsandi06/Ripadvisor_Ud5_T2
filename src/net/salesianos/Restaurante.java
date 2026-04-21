@@ -71,4 +71,8 @@ public class Restaurante {
                "Puntuacion: " + puntuacion + "/5" + "\n" +
                "Valoracion: " + valoracion;
     }
+
+    public boolean tienePuntuacionAlta() {
+        return puntuacion >= 4;
+    }
 }
