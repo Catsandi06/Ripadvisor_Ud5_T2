@@ -1,5 +1,3 @@
-package net.salesianos;
-
 /**
  * Clase principal que inicia la aplicacion.
  */
