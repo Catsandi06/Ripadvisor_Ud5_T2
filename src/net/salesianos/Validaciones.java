@@ -34,4 +34,8 @@ public class Validaciones {
     public static String solicitarCadena(String mensaje, String titulo) {
         return JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE);
     }
+
+    public static boolean esPuntuacionValida(int puntuacion) {
+        return puntuacion >= 1 && puntuacion <= 5;
+    }
 }
