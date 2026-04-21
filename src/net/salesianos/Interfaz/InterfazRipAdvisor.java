@@ -47,5 +47,37 @@ public class InterfazRipAdvisor extends JFrame {
     }
 
     private void anadirRestaurante() {
+        String nombre = Validaciones.solicitarCadena("Nombre:", "Anadir");
+        if (Validaciones.esCadenaVacia(nombre)) {
+            Validaciones.mostrarMensaje("El nombre no puede estar vacio", "Error");
+            return;
+        }
+
+        String direccion = Validaciones.solicitarCadena("Direccion:", "Anadir");
+        String tipo = Validaciones.solicitarCadena("Tipo de cocina:", "Anadir");
+
+        int puntos = Validaciones.solicitarEntero("Puntuacion (1-5):", "Anadir");
+        if (!Validaciones.esPuntuacionValida(puntos)) {
+            Validaciones.mostrarMensaje("Puntuacion invalida", "Error");
+            return;
+        }
+
+        String valoracion = Validaciones.solicitarCadena("Valoracion:", "Anadir");
+
+        Restaurante r = new Restaurante(nombre, direccion, tipo, puntos, valoracion);
+        gestor.anadirRestaurante(r);
+        Validaciones.mostrarMensaje("Restaurante anadido", "OK");
+    }
+
+    private void mostrarRestaurantes() {
+        if (gestor.getCantidad() == 0) {
+            areaTexto.setText("No hay restaurantes");
+            return;
+        }
+        StringBuilder sb = new StringBuilder();
+        for (Restaurante r : gestor.getRestaurantes()) {
+            sb.append(r.toString()).append("\n\n");
+        }
+        areaTexto.setText(sb.toString());
     }
 }
