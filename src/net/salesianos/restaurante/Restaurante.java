@@ -62,4 +62,8 @@ public class Restaurante {
     public String toString() {
         return "Restaurante: " + nombre + "\n" + "Direccion: " + direccion + "\n" + "Tipo: " + tipoCocina + "\n" + "Puntuacion: " + puntuacion + "\n" + "Valoracion: " + valoracion;
     }
+
+    public boolean tienePuntuacionAlta() {
+        return puntuacion >= 4;
+    }
 }
