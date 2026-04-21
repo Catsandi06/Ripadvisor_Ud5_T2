@@ -18,4 +18,12 @@ public class Validaciones {
             return -1;
         }
     }
+
+    public static void mostrarMensaje(String mensaje, String titulo) {
+        JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public static int mostrarConfirmacion(String mensaje, String titulo) {
+        return JOptionPane.showConfirmDialog(null, mensaje, titulo, JOptionPane.YES_NO_OPTION);
+    }
 }
