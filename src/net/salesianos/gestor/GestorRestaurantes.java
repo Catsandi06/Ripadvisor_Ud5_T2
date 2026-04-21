@@ -29,4 +29,8 @@ public class GestorRestaurantes {
         }
         return false;
     }
+
+    public boolean tieneRestaurantes() {
+        return !restaurantes.isEmpty();
+    }
 }
