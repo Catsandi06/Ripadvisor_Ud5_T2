@@ -57,4 +57,9 @@ public class Restaurante {
     public void setValoracion(String valoracion) {
         this.valoracion = valoracion;
     }
+
+    @Override
+    public String toString() {
+        return "Restaurante: " + nombre + "\n" + "Direccion: " + direccion + "\n" + "Tipo: " + tipoCocina + "\n" + "Puntuacion: " + puntuacion + "\n" + "Valoracion: " + valoracion;
+    }
 }
