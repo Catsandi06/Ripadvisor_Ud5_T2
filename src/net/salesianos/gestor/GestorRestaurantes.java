@@ -17,4 +17,16 @@ public class GestorRestaurantes {
     public List<Restaurante> getRestaurantes() {
         return restaurantes;
     }
+
+    public int getCantidad() {
+        return restaurantes.size();
+    }
+
+    public boolean eliminarRestaurante(int indice) {
+        if (indice >= 0 && indice < restaurantes.size()) {
+            restaurantes.remove(indice);
+            return true;
+        }
+        return false;
+    }
 }
