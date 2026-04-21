@@ -9,4 +9,12 @@ public class GestorRestaurantes {
     public GestorRestaurantes() {
         restaurantes = new ArrayList<>();
     }
+
+    public void anadirRestaurante(Restaurante restaurante) {
+        restaurantes.add(restaurante);
+    }
+
+    public List<Restaurante> getRestaurantes() {
+        return restaurantes;
+    }
 }
