@@ -2,6 +2,7 @@ package net.salesianos;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class InterfazRipAdvisor extends JFrame {
     private GestorRestaurantes gestor;
@@ -10,6 +11,7 @@ public class InterfazRipAdvisor extends JFrame {
     public InterfazRipAdvisor() {
         gestor = new GestorRestaurantes();
         configurarVentana();
+        crearMenu();
         crearArea();
     }
 
@@ -25,5 +27,25 @@ public class InterfazRipAdvisor extends JFrame {
         areaTexto.setEditable(false);
         JScrollPane scroll = new JScrollPane(areaTexto);
         add(scroll, BorderLayout.CENTER);
+    }
+
+    private void crearMenu() {
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Opciones");
+
+        JMenuItem anadir = new JMenuItem("Anadir restaurante");
+        anadir.addActionListener(e -> anadirRestaurante());
+
+        JMenuItem mostrar = new JMenuItem("Mostrar restaurantes");
+        mostrar.addActionListener(e -> mostrarRestaurantes());
+
+        menu.add(anadir);
+        menu.add(mostrar);
+
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
+    }
+
+    private void anadirRestaurante() {
     }
 }
